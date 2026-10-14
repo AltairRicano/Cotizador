@@ -1,0 +1,29 @@
+COTIZADOR DE IMPRESIONES DEL CENTRO DE COMPUTO
+==============================================
+
+Contenido
+---------
+Especificacion - Cotizador de impresiones.pdf   Requisitos R1 a R7. Es la base para disenar los casos de prueba.
+ImpresionCC.jar                                  Programa ejecutable.
+src/main/java/uv/lis/pruebas/                    Codigo fuente.
+docs/index.html                                  Documentacion Javadoc.
+
+Ejecutar el programa
+--------------------
+Requiere Java 8 o superior.
+
+  java -jar ImpresionCC.jar TIPO PAGINAS COLOR DOBLE_CARA
+  java -jar ImpresionCC.jar ESTUDIANTE 120 si no
+
+Sin argumentos, el programa pregunta cada dato:
+
+  java -jar ImpresionCC.jar
+
+Preparar las pruebas con JUnit 5
+--------------------------------
+1. Crea un proyecto Java en tu IDE con JUnit 5.
+2. Copia la carpeta src/main/java/uv tal cual, o agrega ImpresionCC.jar como biblioteca del proyecto.
+3. Escribe tus pruebas en src/test/java/uv/lis/pruebas/CotizadorImpresionTest.java.
+4. Compara los resultados con new BigDecimal("12.34"), siempre con dos decimales.
+
+No modifiques el codigo del programa. Si una prueba falla, se reporta, no se corrige.
